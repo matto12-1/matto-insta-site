@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-26-am",
+  "slot": "2026-10-26T07:30:00+09:00",
+  "series": "quiz",
+  "text": "블록은 금방 무너지는데, 높은 건물은 왜 바람에도 끄떡없을까요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「높은 건물은 왜 안 넘어질까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등과학 #건축 #아이와대화",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-26-am/1-34d6de87.jpg",
+      "alt": "땅속 깊이 내려 심은 굵은 기둥 위에 삼각형 뼈대로 세운 높은 탑과, 기둥 옆에서 안전모를 쓴 아이 그림. 아래에 오늘의 한 문제, 높은 건물은 왜 안 넘어질까?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-26-am/2-c4ecea35.jpg",
+      "alt": "문제. 높은 건물이 잘 넘어지지 않는 까닭으로 알맞은 것은? 1번 바람이 건물을 피해 가기 때문에. 2번 건물이 아주 가볍게 만들어져서. 3번 아래쪽이 넓고 무거워 무게중심이 낮아서. 4번 벽에 미끄러운 칠을 해 놓아서."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-26-am/3-0d2da86f.jpg",
+      "alt": "정답 3번, 아래쪽이 넓고 무거워 무게중심이 낮아서. 풀이, 오뚝이처럼 아래가 무거우면 무게중심이 낮아져서 잘 넘어지지 않아요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-26-am/4-2709c38b.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 블록을 높이 쌓으면 와르르 무너져요. 넘어지지 않는 탑을 어떻게 쌓아 볼까? 정답은 없어요. 그 방법을 고른 까닭까지 말하면 칭찬해 주세요."
+    }
+  ]
+}

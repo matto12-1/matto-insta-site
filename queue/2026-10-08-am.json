@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-08-am",
+  "slot": "2026-10-08T07:30:00+09:00",
+  "series": "quiz",
+  "text": "내일은 한글날이에요. 우리 글자는 처음부터 ‘한글’이라고 불렸을까요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「‘한글’이라는 이름은 누가 지었을까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등국어 #한글날 #훈민정음",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-08-am/1-1919412c.jpg",
+      "alt": "한복을 입은 아이가 앉은뱅이책상 앞에 무릎 꿇고 앉아 실로 엮은 책에 손을 얹은 그림, 곁에 붓과 벼루가 놓여 있다. 아래에 오늘의 한 문제, 우리 글자의 처음 이름은?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-08-am/2-6d423c65.jpg",
+      "alt": "문제. 우리 글자가 처음 세상에 나왔을 때의 이름으로 알맞은 것은? 1번 가갸글. 2번 훈민정음. 3번 새 글. 4번 한글."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-08-am/3-006811cf.jpg",
+      "alt": "정답 2번, 훈민정음. 풀이, 처음 이름은 ‘훈민정음’이었고, 줄여서 ‘정음’이라고도 불렀어요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-08-am/4-a40c8942.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 내 이름에도 담긴 뜻이 있을 거예요. 내 이름에는 어떤 뜻이 담겼을까? 정답은 없어요. 이름에 담긴 바라는 마음을 찾아내면 칭찬해 주세요."
+    }
+  ]
+}

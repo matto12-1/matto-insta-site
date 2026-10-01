@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-12-am",
+  "slot": "2026-10-12T07:30:00+09:00",
+  "series": "quiz",
+  "text": "급식을 국자로 똑같이 담아 주면 모두에게 좋을까요?\n아이와 함께 보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「똑같이 나누면 늘 공평할까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등도덕 #공평 #아이와대화",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-12-am/1-6ee38227.jpg",
+      "alt": "키가 다른 나무 받침대 위 그릇 셋에 국자로 물을 똑같이 붓자 낮은 그릇은 넘치고, 아이들이 걱정스럽게 바라보는 그림. 아래에 오늘의 한 문제, 급식을 똑같이 담으면 어떤 일이 생길까?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-12-am/2-2f5b1a6d.jpg",
+      "alt": "문제. 급식을 국자로 똑같이 담아 줄 때 생길 수 있는 일은 무엇인가요? 1번 누구는 남기고 누구는 모자란다. 2번 밥을 남기는 사람이 하나도 없어진다. 3번 국자가 저절로 양을 조절해 준다. 4번 모두가 정확히 같은 양을 먹는다."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-12-am/3-e4d979ce.jpg",
+      "alt": "정답 1번, 누구는 남기고 누구는 모자란다. 풀이, 먹는 양은 사람마다 다르기 때문에, 똑같이 담으면 남는 사람과 모자란 사람이 함께 생겨요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-12-am/4-76a69d8d.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 똑같이 나누었는데 누구는 남고 누구는 모자랐어요. 어떻게 나누었으면 더 나았을까? 정답은 없어요. 사람마다 필요한 양이 다르다는 점을 떠올리면 칭찬해 주세요."
+    }
+  ]
+}
