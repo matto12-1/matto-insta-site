@@ -1,0 +1,24 @@
+{
+  "id": "2026-11-26-am",
+  "slot": "2026-11-26T07:30:00+09:00",
+  "series": "quiz",
+  "text": "칠교판 일곱 조각에 없는 모양, 아이와 함께 맞혀 볼까요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「일곱 조각으로 무엇이든 만드는 칠교놀이」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등수학 #칠교놀이 #아이와대화",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-26-am/1-4f604295.jpg",
+      "alt": "책상 앞에서 주황 색종이를 접는 아이 그림. 옆에 가위와 알록달록한 삼각형 조각들이 놓여 있어요. 아래에 오늘의 한 문제, 칠교판 일곱 조각에 없는 모양은?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-26-am/2-798fa24f.jpg",
+      "alt": "문제. 칠교판의 일곱 조각에 들어 있지 않은 것은? 1번 원. 2번 정사각형. 3번 평행사변형. 4번 큰 삼각형."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-26-am/3-825a6a9b.jpg",
+      "alt": "정답 1번, 원. 풀이, 칠교판은 삼각형 다섯 개, 정사각형 한 개, 평행사변형 한 개로 이루어져 있어요. 동그란 조각은 없어요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-26-am/4-7d8cd1ae.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 조각으로 모양을 만드는 놀이를 떠올려 봐요. 칠교놀이와 닮은 점과 다른 점은 뭘까? 정답은 없어요. 닮은 점과 다른 점을 함께 말하면 칭찬해 주세요."
+    }
+  ]
+}

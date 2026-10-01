@@ -1,0 +1,24 @@
+{
+  "id": "2026-11-12-am",
+  "slot": "2026-11-12T07:30:00+09:00",
+  "series": "quiz",
+  "text": "고사성어 ‘어부지리’ 속 도요새와 조개 이야기, 아이와 함께 풀어 볼까요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「도요새와 조개가 다투면 누가 이길까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등국어 #고사성어 #어부지리",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-12-am/1-d493f9ea.jpg",
+      "alt": "물가 모래밭에서 도요새가 긴 부리로 조개를 쪼고, 바구니를 든 어부가 다가오는 그림. 아래에 오늘의 한 문제, 조개가 껍데기를 꽉 다문 까닭은?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-12-am/2-1c059da1.jpg",
+      "alt": "문제. 조개가 껍데기를 꽉 다문 까닭은 무엇인가요? 1번 어부가 다가와서. 2번 비가 내려서. 3번 도요새가 살을 쪼아서. 4번 잠을 자려고."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-12-am/3-9d2e63dd.jpg",
+      "alt": "정답 3번, 도요새가 살을 쪼아서. 풀이, 도요새가 긴 부리로 살을 쪼자, 아픔에 놀란 조개가 껍데기를 꽉 다물었어요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-12-am/4-f816694e.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 두 친구가 하나 남은 그네를 두고 다퉈요. 둘 다 속상하지 않으려면 어떻게 하면 좋을까? 정답은 없어요. 둘 모두에게 왜 좋은지 말하면 칭찬해 주세요."
+    }
+  ]
+}

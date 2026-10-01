@@ -1,0 +1,24 @@
+{
+  "id": "2026-11-06-am",
+  "slot": "2026-11-06T07:30:00+09:00",
+  "series": "quiz",
+  "text": "11월이 되면 하굣길 하늘이 부쩍 빨리 어두워져요.\n오늘은 해와 별을 이야기할 때 쓰는 낱말 하나, 그 뜻을 보기 넷 가운데 골라 보세요.\n\n정답과 뜻풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「겨울이 다가오면 해는 왜 일찍 질까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등과학 #낱말퀴즈 #계절",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-06-am/1-03a315aa.jpg",
+      "alt": "해 질 녘 가로등이 켜진 동네 길을 손잡고 걸어가는 두 아이 그림. 아래에 오늘의 한 문제, 낱말 ‘고도’는 무엇을 뜻할까?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-06-am/2-bba3c8c5.jpg",
+      "alt": "문제. ‘고도’는 무엇을 뜻하나요? 1번 하루 중 해가 떠 있는 시간. 2번 그림자의 길이. 3번 지구와 해 사이의 거리. 4번 해나 별이 지평선에서 얼마나 높이 떠 있는지를 각도로 나타낸 값."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-06-am/3-efc6d05a.jpg",
+      "alt": "정답 4번, 해나 별이 지평선에서 얼마나 높이 떠 있는지를 각도로 나타낸 값. 풀이, 겨울에는 한낮에도 해의 고도가 낮아서 그림자가 길어요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-06-am/4-48288313.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 지구의 자전축은 약 23.5도 기울어 있어요. 자전축이 똑바로 서 있다면 우리의 1년은 어떻게 될까? 정답은 없어요. 까닭을 기울기와 연결해 말하면 칭찬해 주세요."
+    }
+  ]
+}

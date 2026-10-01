@@ -1,0 +1,24 @@
+{
+  "id": "2026-11-16-am",
+  "slot": "2026-11-16T07:30:00+09:00",
+  "series": "quiz",
+  "text": "외우기 쉬워서 생일이나 1234로 정해 둔 비밀번호, 왜 위험할까요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「비밀번호는 왜 길고 어렵게 만들어야 할까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등정보 #비밀번호 #디지털안전",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-16-am/1-75392468.jpg",
+      "alt": "울타리 미로 한가운데 탑 창문에서 손을 흔드는 아이와 길을 못 찾아 머리를 긁는 너구리 그림. 아래에 오늘의 한 문제, 생일이나 1234 비밀번호가 위험한 까닭은?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-16-am/2-2046f68a.jpg",
+      "alt": "문제. 생일이나 1234 같은 비밀번호가 위험한 까닭으로 알맞은 것은? 1번 한 번밖에 쓸 수 없다. 2번 컴퓨터가 숫자를 읽지 못한다. 3번 너무 길어서 외우기 어렵다. 4번 남도 짐작하기 쉽다."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-16-am/3-2d6d3d49.jpg",
+      "alt": "정답 4번, 남도 짐작하기 쉽다. 풀이, 외우기 쉬운 번호는 남도 짐작하기 쉬워요. 컴퓨터는 자주 쓰이는 번호를 빠르게 하나하나 넣어 볼 수도 있어요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-16-am/4-23bcc540.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 친구가 비밀번호를 알려 달라고 해요. 친구 마음이 상하지 않게 어떻게 거절할까? 정답은 없어요. 까닭을 부드럽게 알려 주며 거절하면 칭찬해 주세요."
+    }
+  ]
+}

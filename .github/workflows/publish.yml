@@ -1,0 +1,60 @@
+# 매일 올리기. 원본은 비공개 저장소 MattoInsta의 site/.github/workflows/publish.yml (여기 고치면 다음 달 올릴 때 덮인다).
+# 깃허브 예약은 20~50분씩 밀리기도 하고 가끔 빠진다 → 정각 1시간 반 전부터 20분 간격으로 세 번 깨우고,
+# 먼저 깬 작업이 준비물을 만들어 둔 채 정각까지 기다렸다가 올린다. 뒤에 깬 작업은 차례를 기다렸다가 「이미 올림」을 보고 끝난다.
+# 멈추려면: 저장소 Settings → Variables → PAUSE = 1
+name: publish
+on:
+  schedule:
+    - cron: "3,23,43 21 * * 0-4" # 한국 시각 월~금 06:03 · 06:23 · 06:43 → 07:30 아침 글
+    - cron: "33,53 9 * * 1-4" # 한국 시각 월~목 18:33 · 18:53 → 20:00 저녁 글
+    - cron: "13 10 * * 1-4" # 한국 시각 월~목 19:13
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "이 편만 바로 올린다(예: 2026-11-02-am). 비우면 지금 시각에 맞는 편"
+        required: false
+        default: ""
+      dry:
+        description: "준비물만 만들고 올리지 않는다(미리 해 보기)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: vars.PAUSE != '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 올리기
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          IN_ID: ${{ inputs.id }}
+          IN_DRY: ${{ inputs.dry }}
+        run: |
+          set --
+          if [ -n "$IN_ID" ]; then set -- "$@" --id "$IN_ID"; fi
+          if [ "$IN_DRY" = "true" ]; then set -- "$@" --dry; fi
+          node scripts/publish.mjs "$@"
+      - name: 기록 남기기
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "state: 올리기 기록"
+          for i in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            git pull -q --rebase origin main
+          done
+          exit 1

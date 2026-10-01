@@ -1,0 +1,24 @@
+{
+  "id": "2026-11-17-am",
+  "slot": "2026-11-17T07:30:00+09:00",
+  "series": "quiz",
+  "text": "기타 줄을 튕기면 소리가 나는 까닭, 아이에게 설명할 수 있나요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「악기 줄은 왜 굵기가 저마다 다를까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등음악 #악기 #아이와대화",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-17-am/1-183446bd.jpg",
+      "alt": "거실 바닥에 앉아 기타 줄을 함께 튕기는 두 아이 그림. 아래에 오늘의 한 문제, 줄악기에서 소리가 생겨나는 까닭은?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-17-am/2-1006f685.jpg",
+      "alt": "문제. 줄악기에서 소리가 생겨나는 까닭은 무엇인가요? 1번 울림통 안에 소리가 담겨 있기 때문. 2번 줄이 빠르게 떨기 때문. 3번 줄의 색깔이 바뀌기 때문. 4번 줄이 뜨거워지기 때문."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-17-am/3-f4e84dd8.jpg",
+      "alt": "정답 2번, 줄이 빠르게 떨기 때문. 풀이, 줄의 진동이 둘레 공기를 흔들고, 그 떨림이 귀에 닿아 소리로 들려요. 울림통은 그 소리를 키워 주는 일을 해요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-17-am/4-93358cef.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 떨려서 소리가 나는 물건을 찾아봐요. 그 소리를 더 높이려면 어떻게 할까? 떨리는 부분을 짧게 하거나 팽팽하게 하면 빨리 떤다는 까닭까지 말하면 칭찬해 주세요."
+    }
+  ]
+}

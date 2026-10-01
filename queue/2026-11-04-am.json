@@ -1,0 +1,24 @@
+{
+  "id": "2026-11-04-am",
+  "slot": "2026-11-04T07:30:00+09:00",
+  "series": "quiz",
+  "text": "아침마다 올리고 내리는 지퍼, 그 이름은 어디에서 왔을까요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「지퍼, 작은 이 수백 개가 한 번에 맞물리는 비밀」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등과학 #발명 #지퍼",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-04-am/1-11f05d33.jpg",
+      "alt": "조끼 지퍼를 올리는 아이와 안경 쓴 할아버지, 단추와 끈에서 지퍼로 바뀌어 온 모습, 맞물린 지퍼 이를 크게 보여 주는 그림. 아래에 오늘의 한 문제, ‘지퍼’라는 이름은 어디에서 왔을까?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-04-am/2-22a1e064.jpg",
+      "alt": "문제. ‘지퍼’라는 이름은 어디에서 왔다고 알려져 있나요? 1번 지퍼를 다는 옷감의 이름. 2번 여밀 때 나는 ‘지익’ 하는 소리. 3번 처음 만든 사람의 이름. 4번 처음 만든 도시의 이름."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-04-am/3-2ea446ee.jpg",
+      "alt": "정답 2번, 여밀 때 나는 ‘지익’ 하는 소리. 풀이, 1920년대에 고무 덧신을 팔던 회사가 ‘지익’ 하는 소리를 따서 붙였다고 알려져 있어요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-04-am/4-ee90a3e3.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 세상에서 지퍼가 갑자기 사라졌어요. 우리 생활에서 무엇이 불편해질까? 정답은 없어요. 왜 불편한지 까닭까지 말하면 칭찬해 주세요."
+    }
+  ]
+}

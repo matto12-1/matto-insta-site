@@ -1,0 +1,24 @@
+{
+  "id": "2026-11-19-am",
+  "slot": "2026-11-19T07:30:00+09:00",
+  "series": "quiz",
+  "text": "옛날에 김장을 한꺼번에 많이 한 까닭, 아이에게 설명할 수 있나요?\n보기 넷 가운데 하나를 골라 보세요.\n\n정답과 풀이는 셋째 장에, 오늘 저녁 아이와 나눌 질문은 마지막 장에 있어요.\n\n오늘 아침신문 「김장, 왜 온 동네가 함께 담갔을까?」\nnews.matto.kr\n(프로필 링크를 누르면 바로 가요)\n\n#마또의아침신문 #오늘의한문제 #초등역사 #김장 #아이와대화",
+  "cards": [
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-19-am/1-8bee942e.jpg",
+      "alt": "한옥 마을 마당에 가족과 이웃이 모여 배추를 절이고 김치를 버무리는 그림. 아래에 오늘의 한 문제, 옛날에 김장을 한꺼번에 많이 한 까닭은?"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-19-am/2-be5dde8e.jpg",
+      "alt": "문제. 옛날에 김장을 한꺼번에 많이 한 가장 큰 까닭은 무엇인가요? 1번 배추는 겨울에만 자라서. 2번 겨울에는 밭에서 거둘 채소가 거의 없어서. 3번 김치는 겨울에만 먹는 음식이라서. 4번 가을에는 소금이 남아돌아서."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-19-am/3-ed792391.jpg",
+      "alt": "정답 2번, 겨울에는 밭에서 거둘 채소가 거의 없어서. 풀이, 겨울에는 거둘 채소가 거의 없었어요. 그래서 가을에 거둔 배추와 무로 김치를 넉넉히 만들어 두었지요."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-19-am/4-852fe10c.jpg",
+      "alt": "오늘 저녁 아이와 나눌 질문. 이웃끼리 돌아가며 김장을 도왔어요. 우리 반에서 돌아가며 도울 수 있는 일은? 정답은 없어요. 한쪽만 돕지 않고 서로 주고받는 방식이면 칭찬해 주세요."
+    }
+  ]
+}
