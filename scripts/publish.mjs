@@ -148,6 +148,7 @@ export async function runOnce({ dir, api, github, now, sleep, id = null, dry = f
   const entry = id ? (entries.find((e) => e.id === id && !posted.has(e.id)) ?? null) : pickPost(entries, posted, now());
   if (!entry) return out;
   try {
+    if (!api) throw new Error("인스타 출입증(IG_TOKEN)이 저장소 금고에 없다");
     const r = await publishOne({ api, entry, now, sleep, dry, wait: !id });
     if (r.status === "dry") out.dry = entry.id;
     else {
@@ -182,11 +183,11 @@ async function main() {
   const id = args.includes("--id") ? args[args.indexOf("--id") + 1] || null : null;
   const dry = args.includes("--dry");
   const token = process.env.IG_TOKEN ?? "";
-  if (!token) throw new Error("IG_TOKEN이 없다(저장소 금고)");
   const dir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   const r = await runOnce({
     dir, id, dry, token,
-    api: igApi(token),
+    api: token ? igApi(token) : null, // 출입증이 없어도 알림(못 올린 글 · 이번 달 글 없음)은 한다
+
     github: githubIssues(process.env.GITHUB_REPOSITORY, process.env.GITHUB_TOKEN),
     now: () => new Date(),
     sleep: (ms) => new Promise((res) => setTimeout(res, ms)),
