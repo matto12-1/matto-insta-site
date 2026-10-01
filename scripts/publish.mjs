@@ -100,6 +100,8 @@ export async function publishOne({ api, entry, now, sleep, dry = false, wait = t
   if (dry) return { status: "dry", creationId };
   const ms = Date.parse(entry.slot) - now().getTime();
   if (wait && ms > 0) await sleep(ms);
+  // 준비가 오래 걸려 90분을 넘겼으면 올리지 않는다(아침 글이 점심에 올라가지 않게)
+  if (wait && now().getTime() > Date.parse(entry.slot) + LATE) throw new Error("준비하다 정각보다 90분 넘게 늦어져 올리지 않았다");
   const { id } = await api.post(`${IG_USER}/media_publish`, { creation_id: creationId });
   let permalink = null;
   try {
@@ -157,7 +159,8 @@ export async function runOnce({ dir, api, github, now, sleep, id = null, dry = f
     }
   } catch (err) {
     out.failed = entry.id;
-    if (!failed.has(entry.id)) {
+    if (dry) console.error(`미리 해 보기 실패: ${hide(err?.message ?? String(err), token)}`);
+    else if (!failed.has(entry.id)) {
       await alert(`[인스타] ${when(entry.id)} 글 올리기 실패`, `- 올릴 시각: ${entry.slot}\n- 까닭: ${err?.message ?? String(err)}\n- 출입증 문제면 이 PC의 새벽 작업이 연장하고 금고에 다시 넣는다. 다음 예약이 다시 해 본다(90분 안이면).`);
       await mark(dir, "failed", entry.id, { id: entry.id, at: now().toISOString(), error: hide(err?.message ?? String(err), token) });
     }
@@ -173,7 +176,8 @@ function githubIssues(repo, token) {
         headers: { authorization: `Bearer ${token}`, accept: "application/vnd.github+json", "content-type": "application/json" },
         body: JSON.stringify({ title, body }),
       });
-      if (!res.ok) console.error(`알림 이슈를 못 열었다: ${res.status}`);
+      // 못 열었으면 던진다: 「알렸다」는 기록을 남기지 않고 작업이 실패로 끝나 깃허브 실패 메일이 대신 간다
+      if (!res.ok) throw new Error(`알림 이슈를 못 열었다: ${res.status}`);
     },
   };
 }
