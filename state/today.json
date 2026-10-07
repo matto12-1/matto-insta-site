@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-08-am",
+      "day": "2026-10-08",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "내일은 한글날이에요. 우리 글자는 처음부터 ‘한글’이라고 불렸을까요?",
+      "link": "https://news.matto.kr/?from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-08-am/1-1919412c.jpg",
+      "permalink": "https://www.instagram.com/p/DeNXbtigZ-X/"
+    },
+    {
       "id": "2026-10-07-pm",
       "day": "2026-10-07",
       "series": "myth",
