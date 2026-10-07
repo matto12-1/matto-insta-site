@@ -1,0 +1,172 @@
+<!doctype html>
+<!-- 원본은 비공개 저장소 MattoInsta의 site/docs/입니다. 공개 저장소에서 고치면 다음 달 올릴 때 덮어씁니다. -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>마또랩 오늘의 글</title>
+  <meta name="description" content="인스타에서 만난 오늘의 글, 원래 사이트에서 이어 읽어요. 오늘의 한 문제와 신화 인물 도감, 이야기 한국사를 모았습니다.">
+  <meta property="og:title" content="마또랩 오늘의 글">
+  <meta property="og:description" content="오늘 올라온 글을 원래 사이트에서 이어 읽어요.">
+  <meta property="og:image" content="https://today.matto.kr/og.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fffdf9; color: #1e1e1e; font-family: "Noto Sans KR", sans-serif; line-height: 1.55; word-break: keep-all; overflow-wrap: anywhere; }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #1e1e1e; outline-offset: 5px; }
+    header { padding: 25px 5vw 22px; border-bottom: 1px solid #e9e2d8; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .labmark { font-family: "Sora", sans-serif; font-size: 25px; letter-spacing: -.012em; line-height: 1; text-decoration: none; }
+    .labmark i { font-style: normal; font-weight: 500; color: #1e1e1e; }
+    .labmark b { font-weight: 800; color: #e8590c; }
+    h1 { font-size: 25px; letter-spacing: -.04em; margin: 0; }
+    main { padding: 26px 5vw 42px; }
+    h2 { font-size: 21px; margin: 0 0 18px; letter-spacing: -.03em; }
+    .today-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 24px; }
+    .entry { background: #fff; border: 1px solid #e9e2d8; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; }
+    .cover { width: min(100%, 280px); height: auto; aspect-ratio: 4 / 5; object-fit: contain; display: block; align-self: center; background: #f6f1e9; border-radius: 8px; }
+    .label { font-size: 13px; font-weight: 700; color: #a53b09; margin: 18px 0 7px; }
+    h3 { font-size: 24px; line-height: 1.45; letter-spacing: -.035em; margin: 0 0 20px; }
+    .continue { background: #c94408; color: #fff; padding: 16px 12px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; font-size: 16px; margin-top: auto; }
+    .continue:hover { background: #a63706; }
+    .instagram { align-self: center; color: #666; font-size: 13px; margin-top: 14px; }
+    #past { margin-top: 42px; }
+    .past-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 26px; }
+    .day h3 { font-size: 16px; margin: 0 0 12px; color: #666; }
+    .past-entry { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid #e9e2d8; }
+    .thumbnail { flex: 0 0 64px; width: 64px; height: auto; aspect-ratio: 4 / 5; object-fit: contain; background: #f6f1e9; border-radius: 4px; }
+    .past-entry .label { margin: 0 0 4px; font-size: 12px; }
+    .past-entry p { margin: 0 0 6px; }
+    .past-entry a { color: #a53b09; font-size: 14px; font-weight: 700; }
+    footer { border-top: 1px solid #e9e2d8; padding: 28px 5vw 36px; background: #f6f1e9; }
+    footer p { margin: 0 0 14px; font-size: 14px; color: #666; }
+    footer nav { display: flex; gap: 14px 28px; flex-wrap: wrap; font-size: 14px; }
+    #message { margin: 0; padding: 22px 0; color: #666; }
+    [hidden] { display: none !important; }
+    @media (min-width: 1500px) { .today-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) {
+      header { padding: 21px 20px; gap: 12px; }
+      .labmark { font-size: 22px; }
+      h1 { font-size: 22px; }
+      main { padding: 22px 20px 32px; }
+      h2 { font-size: 19px; margin-bottom: 14px; }
+      .entry { padding: 18px; }
+      .cover { width: min(100%, 232px); }
+      h3 { font-size: 22px; }
+      footer { padding: 26px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header><a class="labmark" href="https://matto.kr/" aria-label="마또랩"><i>Matto</i><b>LAB</b></a><h1>오늘 올라온 글</h1></header>
+  <main>
+    <p id="message" role="status">글을 불러오고 있어요</p>
+    <section id="featured" aria-labelledby="featured-title" hidden><h2 id="featured-title"></h2><div class="today-grid" id="today-list"></div></section>
+    <section id="past" aria-labelledby="past-title" hidden><h2 id="past-title">지난 글</h2><div class="past-grid" id="past-list"></div></section>
+    <noscript><p>잠시 뒤 다시 열어 주세요</p></noscript>
+  </main>
+  <footer>
+    <p>선생님이 만드는 교실 도구</p>
+    <nav aria-label="마또랩 사이트">
+      <a href="https://matto.kr/">마또랩</a>
+      <a href="https://news.matto.kr/">마또의 아침신문</a>
+      <a href="https://classics.matto.kr/">매일 읽는 고전</a>
+      <a href="https://history.matto.kr/">이야기 한국사</a>
+      <a href="https://www.instagram.com/matto__lab/">마또랩 인스타그램</a>
+    </nav>
+  </footer>
+  <script>
+    const COUNTER = "";
+    const local = ["localhost", "127.0.0.1"].includes(location.hostname);
+    const params = new URLSearchParams(location.search);
+    const RAW = "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main";
+    let data = `${RAW}/state/today.json?v=${Math.floor(Date.now() / 60000)}`;
+    if (local && params.has("data")) {
+      const relative = params.get("data");
+      try {
+        const url = new URL(relative, location.href);
+        if (!/^[a-z][a-z\d+.-]*:/i.test(relative) && !relative.startsWith("//") && url.origin === location.origin) data = url.href;
+      } catch { /* 잘못된 시험 주소는 무시하고 공개 목록을 받는다 */ }
+    }
+    const override = local && /^\d{4}-\d{2}-\d{2}$/.test(params.get("today") ?? "") ? params.get("today") : null;
+    const today = override ?? new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
+    if (COUNTER) {
+      const script = document.createElement("script");
+      script.src = "https://gc.zgo.at/count.js";
+      script.dataset.goatcounter = COUNTER;
+      script.async = true;
+      document.head.append(script);
+    }
+    const dateLabel = (day) => `${Number(day.slice(5, 7))}월 ${Number(day.slice(8, 10))}일`;
+    function node(tag, className, text) {
+      const el = document.createElement(tag);
+      if (className) el.className = className;
+      if (text) el.textContent = text;
+      return el;
+    }
+    function safeUrl(value, hosts) {
+      try { const url = new URL(value); return url.protocol === "https:" && hosts.includes(url.hostname) ? url.href : null; }
+      catch { return null; }
+    }
+    function reading(item, large) {
+      const a = node("a", large ? "continue" : "", large ? `${item.siteName}에서 이어 읽기` : "이어 읽기");
+      const href = safeUrl(item.link, ["news.matto.kr", "classics.matto.kr", "history.matto.kr"]);
+      if (!href) return null;
+      a.href = href;
+      // 원래 탭을 남겨 두므로 이어 읽는 쪽이 바로 열려도 방문 기록 요청은 끝까지 간다.
+      a.target = "_blank"; a.rel = "noopener";
+      a.setAttribute("aria-label", `${a.textContent}, 새 창에서 열기`);
+      a.addEventListener("click", () => {
+        if (COUNTER && window.goatcounter?.count) window.goatcounter.count({ path: `go/${item.series}/${item.id}`, title: item.title, event: true });
+      });
+      return a;
+    }
+    function image(item, large) {
+      if (!item.cover) return null;
+      let href = safeUrl(item.cover, ["raw.githubusercontent.com"]);
+      if (local) { try { const url = new URL(item.cover, location.href); if (url.origin === location.origin) href = url.href; } catch {} }
+      if (!href) return null;
+      const img = node("img", large ? "cover" : "thumbnail");
+      img.src = href; img.alt = `${item.title} 표지`; img.width = large ? 280 : 64; img.height = large ? 350 : 80;
+      if (!large) img.loading = "lazy";
+      return img;
+    }
+    function entry(item, large) {
+      const article = node("article", large ? "entry" : "past-entry");
+      const cover = image(item, large); if (cover) article.append(cover);
+      const body = large ? article : node("div");
+      body.append(node("p", "label", item.label), node(large ? "h3" : "p", "", item.title));
+      const link = reading(item, large); if (link) body.append(link);
+      if (!large) article.append(body);
+      const permalink = safeUrl(item.permalink, ["www.instagram.com", "instagram.com"]);
+      if (large && permalink) { const a = node("a", "instagram", "인스타에서 다시 보기"); a.href = permalink; article.append(a); }
+      return article;
+    }
+    async function load() {
+      const message = document.getElementById("message");
+      try {
+        const response = await fetch(data);
+        if (!response.ok) throw new Error("목록을 못 받았다");
+        const payload = await response.json();
+        if (!Array.isArray(payload.items)) throw new Error("목록 모양이 다르다");
+        const items = payload.items.filter(i => i && /^\d{4}-\d{2}-\d{2}$/.test(i.day) && i.day <= today).sort((a, b) => b.id.localeCompare(a.id));
+        if (!items.length) { message.textContent = "아직 올라온 글이 없어요"; return; }
+        const day = items.some(i => i.day === today) ? today : items[0].day;
+        document.getElementById("featured-title").textContent = day === today ? "오늘의 글" : `${dateLabel(day)}에 올라온 글`;
+        document.getElementById("today-list").replaceChildren(...items.filter(i => i.day === day).map(i => entry(i, true)));
+        document.getElementById("featured").hidden = false;
+        const since = new Date(`${today}T00:00:00Z`); since.setUTCDate(since.getUTCDate() - 13);
+        const groups = new Map();
+        for (const item of items.filter(i => i.day !== day && i.day >= since.toISOString().slice(0, 10))) {
+          if (!groups.has(item.day)) groups.set(item.day, []);
+          groups.get(item.day).push(item);
+        }
+        for (const [date, posts] of groups) { const group = node("section", "day"); group.append(node("h3", "", dateLabel(date)), ...posts.map(i => entry(i, false))); document.getElementById("past-list").append(group); }
+        document.getElementById("past").hidden = groups.size === 0;
+        message.hidden = true;
+      } catch { message.textContent = "잠시 뒤 다시 열어 주세요"; }
+    }
+    load();
+  </script>
+</body>
+</html>

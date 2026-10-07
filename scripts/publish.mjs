@@ -114,6 +114,41 @@ export async function publishOne({ api, entry, now, sleep, dry = false, wait = t
 
 const readJson = async (f) => JSON.parse(await readFile(f, "utf8"));
 const ids = async (dir) => new Set(existsSync(dir) ? (await readdir(dir)).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)) : []);
+
+const TODAY_SERIES = {
+  quiz: { label: "오늘의 한 문제", siteName: "마또의 아침신문", link: "https://news.matto.kr/?from=insta" },
+  myth: { label: "그리스 로마 신화 인물 도감", siteName: "매일 읽는 고전", link: "https://classics.matto.kr/?s=greek-myth&from=insta" },
+  history: { label: "이야기 한국사", siteName: "이야기 한국사", link: "https://history.matto.kr/?from=insta" },
+};
+
+export async function buildToday(dir) {
+  const items = [];
+  for (const id of [...await ids(path.join(dir, "state", "posted"))].sort().reverse()) {
+    const record = await readJson(path.join(dir, "state", "posted", `${id}.json`));
+    const file = path.join(dir, "queue", `${id}.json`);
+    const queue = existsSync(file) ? await readJson(file) : {};
+    const series = queue.series ?? record.series;
+    const defaults = Object.hasOwn(TODAY_SERIES, series) ? TODAY_SERIES[series] : null;
+    if (!defaults) continue;
+    const value = (key, fallback) => typeof queue[key] === "string" && queue[key].trim() ? queue[key] : fallback;
+    items.push({
+      id, day: id.slice(0, 10), series,
+      label: value("label", defaults.label), siteName: value("siteName", defaults.siteName),
+      title: value("title", String(queue.text ?? "").split(/\r?\n/)[0]), link: value("link", defaults.link),
+      cover: queue.cards?.[0]?.url ?? null, permalink: record.permalink ?? null,
+    });
+    if (items.length === 60) break;
+  }
+  return { items };
+}
+
+export async function writeToday(dir) {
+  const content = JSON.stringify(await buildToday(dir), null, 2) + "\n";
+  const file = path.join(dir, "state", "today.json");
+  if (existsSync(file) && await readFile(file, "utf8") === content) return;
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, content);
+}
 async function mark(dir, sub, name, v) {
   await mkdir(path.join(dir, "state", sub), { recursive: true });
   await writeFile(path.join(dir, "state", sub, `${name}.json`), JSON.stringify(v, null, 2) + "\n");
@@ -188,14 +223,23 @@ async function main() {
   const dry = args.includes("--dry");
   const token = process.env.IG_TOKEN ?? "";
   const dir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-  const r = await runOnce({
-    dir, id, dry, token,
-    api: token ? igApi(token) : null, // 출입증이 없어도 알림(못 올린 글 · 이번 달 글 없음)은 한다
+  let r;
+  try {
+    r = await runOnce({
+      dir, id, dry, token,
+      api: token ? igApi(token) : null, // 출입증이 없어도 알림(못 올린 글 · 이번 달 글 없음)은 한다
 
-    github: githubIssues(process.env.GITHUB_REPOSITORY, process.env.GITHUB_TOKEN),
-    now: () => new Date(),
-    sleep: (ms) => new Promise((res) => setTimeout(res, ms)),
-  });
+      github: githubIssues(process.env.GITHUB_REPOSITORY, process.env.GITHUB_TOKEN),
+      now: () => new Date(),
+      sleep: (ms) => new Promise((res) => setTimeout(res, ms)),
+    });
+  } finally {
+    try {
+      await writeToday(dir);
+    } catch (err) {
+      console.error(`오늘 목록 만들기 실패: ${hide(err?.message ?? String(err), token).replace(/[\r\n]+/g, " ")}`);
+    }
+  }
   console.log(JSON.stringify(r));
   return r.failed ? 1 : 0;
 }

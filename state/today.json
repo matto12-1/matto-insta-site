@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "id": "2026-10-07-pm",
+      "day": "2026-10-07",
+      "series": "myth",
+      "label": "그리스 로마 신화 인물 도감",
+      "siteName": "매일 읽는 고전",
+      "title": "우라노스",
+      "link": "https://classics.matto.kr/?s=greek-myth&ep=1&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-07-pm/1-ea2cf14b.jpg",
+      "permalink": "https://www.instagram.com/p/DeMIeYnlu2J/"
+    },
+    {
+      "id": "2026-10-07-am",
+      "day": "2026-10-07",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "광고에 ‘오늘까지만’이 자주 나오는 까닭은?",
+      "link": "https://news.matto.kr/?date=2026-10-07&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-07-am/1-d5d440c5.jpg",
+      "permalink": "https://www.instagram.com/p/DeKyndHD_6t/"
+    },
+    {
+      "id": "2026-10-06-pm",
+      "day": "2026-10-06",
+      "series": "history",
+      "label": "이야기 한국사",
+      "siteName": "이야기 한국사",
+      "title": "달력에 남은 신화",
+      "link": "https://history.matto.kr/?from=insta#read/3",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-06-pm/1-32b76985.jpg",
+      "permalink": "https://www.instagram.com/p/DeJjrKvnDmL/"
+    },
+    {
+      "id": "2026-10-06-am",
+      "day": "2026-10-06",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "피노키오의 코가 길어진 까닭은?",
+      "link": "https://news.matto.kr/?date=2026-10-06&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-06-am/1-14596e74.jpg",
+      "permalink": "https://www.instagram.com/p/DeIN0oOgSYj/"
+    },
+    {
+      "id": "2026-10-05-pm",
+      "day": "2026-10-05",
+      "series": "myth",
+      "label": "그리스 로마 신화 인물 도감",
+      "siteName": "매일 읽는 고전",
+      "title": "가이아",
+      "link": "https://classics.matto.kr/?s=greek-myth&ep=1&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-05-pm/1-886df9ec.jpg",
+      "permalink": "https://www.instagram.com/p/DeG-4jhG55W/"
+    },
+    {
+      "id": "2026-10-05-am",
+      "day": "2026-10-05",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "빠른 음악을 들으면 기분이 어떻게 될까?",
+      "link": "https://news.matto.kr/?date=2026-09-30&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-05-am/1-db0d927c.jpg",
+      "permalink": "https://www.instagram.com/p/DeFpB3ZGZOd/"
+    },
+    {
+      "id": "2026-10-02-am",
+      "day": "2026-10-02",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "‘국경일’은 무슨 뜻일까?",
+      "link": "https://news.matto.kr/?date=2026-10-02&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-02-am/1-50bb4d04.jpg",
+      "permalink": "https://www.instagram.com/p/Dd96nQpj5Lc/"
+    },
+    {
+      "id": "2026-10-01-pm",
+      "day": "2026-10-01",
+      "series": "history",
+      "label": "이야기 한국사",
+      "siteName": "이야기 한국사",
+      "title": "강물이 오천 년 만에 걷어 낸 것",
+      "link": "https://history.matto.kr/?from=insta#read/2",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-01-pm/1-3fac7486.jpg",
+      "permalink": "https://www.instagram.com/p/Dd82QlAkQhM/"
+    }
+  ]
+}
