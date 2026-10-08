@@ -43,6 +43,7 @@ jobs:
         with:
           node-version: 22
       - name: 올리기
+        id: cards
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -51,10 +52,11 @@ jobs:
         run: |
           set --
           if [ -n "$IN_ID" ]; then set -- "$@" --id "$IN_ID"; fi
-          if [ "$IN_DRY" = "true" ]; then set -- "$@" --dry; fi
+          if [ "$IN_DRY" = "true" ]; then node scripts/reel-dry.mjs "$@"; exit $?; fi
           node scripts/publish.mjs "$@"
       - name: 기록 남기기
-        if: always()
+        id: card_records
+        if: always() && inputs.dry != true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -64,6 +66,37 @@ jobs:
           for i in 1 2 3 4 5; do
             if git push -q origin HEAD:main; then exit 0; fi
             # 같은 파일을 다른 작업이 먼저 적었으면 다시 맞추기가 멈춘다 → 조용히 넘어가지 않고 실패로 끝낸다
+            if ! git pull -q --rebase origin main; then git rebase --abort || true; exit 1; fi
+          done
+          exit 1
+      - name: 릴 이어 올리기
+        id: reels
+        if: "always() && vars.PAUSE != '1' && ((inputs.dry == true) || (steps.cards.outcome == 'success' && steps.card_records.outcome == 'success' && vars.REELS_ENABLED == '1'))"
+        continue-on-error: true
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          REELS_ENABLED: ${{ vars.REELS_ENABLED }}
+          PAUSE: ${{ vars.PAUSE }}
+          IN_ID: ${{ inputs.id }}
+          IN_DRY: ${{ inputs.dry }}
+        run: |
+          set --
+          if [ -n "$IN_ID" ]; then set -- "$@" --id "$IN_ID"; fi
+          if [ "$IN_DRY" = "true" ]; then set -- "$@" --dry; fi
+          node scripts/reel.mjs "$@"
+      - name: 릴 기록 남기기
+        if: always() && steps.reels.outcome != 'skipped' && inputs.dry != true
+        continue-on-error: true
+        run: |
+          if [ ! -d state/reels ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/reels
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "state: 릴 올리기 기록"
+          for i in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then exit 0; fi
             if ! git pull -q --rebase origin main; then git rebase --abort || true; exit 1; fi
           done
           exit 1

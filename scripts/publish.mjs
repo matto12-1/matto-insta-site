@@ -64,9 +64,9 @@ export function igApi(token, fetchImpl = fetch) {
 
 const norm = (s) => String(s ?? "").replace(/\s+/g, " ").trim();
 export async function alreadyPosted(api, text) {
-  const { data = [] } = await api.get(`${IG_USER}/media`, { fields: "id,caption,permalink,timestamp", limit: "12" });
+  const { data = [] } = await api.get(`${IG_USER}/media`, { fields: "id,caption,permalink,timestamp,media_product_type", limit: "12" });
   const want = norm(text);
-  const hit = data.find((m) => norm(m.caption) === want);
+  const hit = data.find((m) => m.media_product_type !== "REELS" && norm(m.caption) === want);
   return hit ? { mediaId: hit.id, permalink: hit.permalink ?? null } : null;
 }
 
