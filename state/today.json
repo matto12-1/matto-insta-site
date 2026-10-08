@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-09-am",
+      "day": "2026-10-09",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "‘미안해’ 한마디가 왜 이렇게 어려울까요?",
+      "link": "https://news.matto.kr/?from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-09-am/1-3facd689.jpg",
+      "permalink": "https://www.instagram.com/p/DeP8PUkAQVo/"
+    },
+    {
       "id": "2026-10-08-pm",
       "day": "2026-10-08",
       "series": "history",
