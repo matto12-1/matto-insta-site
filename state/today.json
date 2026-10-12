@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-12-pm",
+      "day": "2026-10-12",
+      "series": "myth",
+      "label": "그리스 로마 신화 인물 도감",
+      "siteName": "매일 읽는 고전",
+      "title": "태어나는 아기를 차례로 삼킨 왕",
+      "link": "https://classics.matto.kr/?s=greek-myth&ep=3&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-12-pm/1-dd5fbb5c.jpg",
+      "permalink": "https://www.instagram.com/p/DeZAaC4kUMl/"
+    },
+    {
       "id": "2026-10-12-am",
       "day": "2026-10-12",
       "series": "quiz",
