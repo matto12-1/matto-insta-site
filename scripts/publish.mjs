@@ -122,6 +122,10 @@ const TODAY_SERIES = {
 };
 
 export async function buildToday(dir) {
+  // Keep the published history's day values; only new entries use the actual publishing day.
+  const todayFile = path.join(dir, "state", "today.json");
+  const previous = existsSync(todayFile) ? await readJson(todayFile) : { items: [] };
+  const days = new Map(previous.items.map(item => [item.id, item.day]));
   const items = [];
   for (const id of [...await ids(path.join(dir, "state", "posted"))].sort().reverse()) {
     const record = await readJson(path.join(dir, "state", "posted", `${id}.json`));
@@ -132,14 +136,22 @@ export async function buildToday(dir) {
     if (!defaults) continue;
     const value = (key, fallback) => typeof queue[key] === "string" && queue[key].trim() ? queue[key] : fallback;
     items.push({
-      id, day: id.slice(0, 10), series,
+      id, day: days.get(id) ?? publishingDay(record, queue, id), series,
       label: value("label", defaults.label), siteName: value("siteName", defaults.siteName),
       title: value("title", String(queue.text ?? "").split(/\r?\n/)[0]), link: value("link", defaults.link),
       cover: queue.cards?.[0]?.url ?? null, permalink: record.permalink ?? null,
     });
-    if (items.length === 60) break;
   }
-  return { items };
+  return { items: items.sort((a, b) => b.day.localeCompare(a.day) || b.id.localeCompare(a.id)).slice(0, 60) };
+}
+
+export function publishingDay(record, queue, id) {
+  const day = value => {
+    const parsed = new Date(value ?? "");
+    return Number.isFinite(parsed.getTime()) ? kst(parsed).toISOString().slice(0, 10) : null;
+  };
+  if (record.manual || record.how === "manual") return day(record.postedAt) ?? day(record.slot ?? queue.slot) ?? id.slice(0, 10);
+  return day(record.slot ?? queue.slot) ?? day(record.postedAt) ?? id.slice(0, 10);
 }
 
 export async function writeToday(dir) {
@@ -190,7 +202,7 @@ export async function runOnce({ dir, api, github, now, sleep, id = null, dry = f
     if (r.status === "dry") out.dry = entry.id;
     else {
       out[r.status === "already" ? "already" : "posted"] = entry.id;
-      await mark(dir, "posted", entry.id, { id: entry.id, slot: entry.slot, mediaId: r.mediaId, permalink: r.permalink, postedAt: now().toISOString(), how: r.status });
+      await mark(dir, "posted", entry.id, { id: entry.id, slot: entry.slot, mediaId: r.mediaId, permalink: r.permalink, postedAt: now().toISOString(), how: r.status, manual: Boolean(id) });
     }
   } catch (err) {
     out.failed = entry.id;
