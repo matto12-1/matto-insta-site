@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-19-am",
+      "day": "2026-10-19",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "시는 왜 줄을 바꿀까?",
+      "link": "https://news.matto.kr/?date=2026-10-19&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-19-am/1-03b1bf19.jpg",
+      "permalink": "https://www.instagram.com/p/DepsMC-GZIo/"
+    },
+    {
       "id": "2026-10-16-am",
       "day": "2026-10-16",
       "series": "quiz",
