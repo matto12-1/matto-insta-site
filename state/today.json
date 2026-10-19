@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-20-am",
+      "day": "2026-10-20",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "학교 앞 표지판은 왜 노란색일까?",
+      "link": "https://news.matto.kr/?date=2026-10-20&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-20-am/1-136bdb40.jpg",
+      "permalink": "https://www.instagram.com/p/DesQ_CAAZ0q/"
+    },
+    {
       "id": "2026-10-19-am",
       "day": "2026-10-19",
       "series": "quiz",
