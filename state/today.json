@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-22-am",
+      "day": "2026-10-22",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "큰 계획은 왜 오래가기 어려울까?",
+      "link": "https://news.matto.kr/?date=2026-10-22&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-22-am/1-d80aeff4.jpg",
+      "permalink": "https://www.instagram.com/p/DexalfGm1ef/"
+    },
+    {
       "id": "2026-10-21-am",
       "day": "2026-10-21",
       "series": "quiz",
