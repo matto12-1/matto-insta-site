@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-27-am",
+      "day": "2026-10-27",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "가을 잎은 왜 노랗게 될까?",
+      "link": "https://news.matto.kr/?date=2026-10-27&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-27-am/1-1fc9503c.jpg",
+      "permalink": "https://www.instagram.com/p/De-SikmAVut/"
+    },
+    {
       "id": "2026-10-26-am",
       "day": "2026-10-26",
       "series": "quiz",
