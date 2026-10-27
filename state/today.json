@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-28-am",
+      "day": "2026-10-28",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "거북선은 왜 위를 덮었을까?",
+      "link": "https://news.matto.kr/?date=2026-10-28&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-28-am/1-3662c84c.jpg",
+      "permalink": "https://www.instagram.com/p/DfA3UeSFBY5/"
+    },
+    {
       "id": "2026-10-27-am",
       "day": "2026-10-27",
       "series": "quiz",
