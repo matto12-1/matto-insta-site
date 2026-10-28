@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-10-29-am",
+      "day": "2026-10-29",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "금도끼 은도끼는 왜 하필 세 번일까?",
+      "link": "https://news.matto.kr/?date=2026-10-29&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-10-29-am/1-18525269.jpg",
+      "permalink": "https://www.instagram.com/p/DfDcMSFgSZo/"
+    },
+    {
       "id": "2026-10-28-am",
       "day": "2026-10-28",
       "series": "quiz",
