@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-11-03-am",
+      "day": "2026-11-03",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "하나를 고르기는 왜 어려울까?",
+      "link": "https://news.matto.kr/?date=2026-11-03&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-03-am/1-55701243.jpg",
+      "permalink": "https://www.instagram.com/p/DfQKBCAH9Bc/"
+    },
+    {
       "id": "2026-11-02-am",
       "day": "2026-11-02",
       "series": "quiz",
