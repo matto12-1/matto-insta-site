@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-11-04-am",
+      "day": "2026-11-04",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "슬라이더 속 길은 어떤 모양일까?",
+      "link": "https://news.matto.kr/?date=2026-11-04&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-04-am/1-25d82477.jpg",
+      "permalink": "https://www.instagram.com/p/DfS5BAZj235/"
+    },
+    {
       "id": "2026-11-03-am",
       "day": "2026-11-03",
       "series": "quiz",
