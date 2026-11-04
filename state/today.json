@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-11-05-am",
+      "day": "2026-11-05",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "가까운 나무와 먼 산 어떻게 그릴까?",
+      "link": "https://news.matto.kr/?date=2026-11-05&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-05-am/1-dc20cd8c.jpg",
+      "permalink": "https://www.instagram.com/p/DfVdyO3ASuL/"
+    },
+    {
       "id": "2026-11-04-am",
       "day": "2026-11-04",
       "series": "quiz",
