@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "id": "2026-11-10-am",
+      "day": "2026-11-10",
+      "series": "quiz",
+      "label": "오늘의 한 문제",
+      "siteName": "마또의 아침신문",
+      "title": "설문대할망이 흙을 쌓아 만든 산은 무엇일까?",
+      "link": "https://news.matto.kr/?date=2026-11-10&from=insta",
+      "cover": "https://raw.githubusercontent.com/matto12-1/matto-insta-site/main/cards/2026-11-10-am/1-7dbc3942.jpg",
+      "permalink": "https://www.instagram.com/p/DfiOEz-CaPP/"
+    },
+    {
       "id": "2026-11-09-am",
       "day": "2026-11-09",
       "series": "quiz",
